@@ -1,0 +1,47 @@
+<?xml version = "1.0"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtnl11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>tax</title><style type ="text/css">
+body{background-image:url("http://hassanplas.com/wp-content/uploads/2014/04/Desktop-Background-wallpapers-34.jpg"); margin:0.6in;}
+div.container {width: 100%;}
+header {color:black;clear:left;text-align:center;font-family:sans-serif;}
+p1.at{font-family:"Arial";font-size:24pt;}
+</style>
+<script>
+function myFunction()
+{
+var income = document.getElementById('demo').value;
+var tax=0;
+if(income<=250000)
+{
+document.getElementById("result").value=income;
+document.getElementById("tax").value=tax;
+}
+else if(income>=250000 && income<=500000)
+{
+tax=5;
+document.getElementById("result").value=income=income = income - (0.05*income);
+document.getElementById("tax").value=tax;
+}
+else
+{
+tax=30;
+document.getElementById("result").value=income = (income - (0.3*income))+112500;
+document.getElementById("tax").value=tax;
+}
+}
+</script>
+</head>
+<body align="centre">
+<p1 class="at">
+<pre>
+<header><h1>INCOME TAX CALCULATOR</h1></header>
+<h5>Enter Annual Income:<input id='demo' type="text" name="income" ><br>
+<button onclick="myFunction();" style="width:120px; height:60px; font-size: 20px;"> calculate </button><br>
+Final Income:<input name="income" type="text" maxlength="20" id="result"/><br>
+Tax In percentage:<input name="tax" type="text" maxlength="20" id="tax"/> <br>
+</h5>
+</pre>
+</p1>
+</body>
+</html>
